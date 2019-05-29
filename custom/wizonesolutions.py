@@ -1,13 +1,19 @@
-# from talon_plugins.speech import menu
-# menu.lang_activate(menu.active_langs['en_US'])
+from talon import app, tap, ctrl, actions
 
-from talon import app, tap, ctrl
-from talon_plugins import speech
+
+# from talon_plugins import speech
+# from talon_plugins.speech import menu
+
+
 def set_speech_on_start():
     # Disable speech recognition on startup.
-    speech.set_enabled(False)
+    actions.speech.toggle(False)
+
 
 app.register('launch', set_speech_on_start)
+
+# menu.lang_activate(menu.active_langs['en_US'])
+
 
 # # Swap RollerMouse polarity when holding shift
 # class ShiftScroll:

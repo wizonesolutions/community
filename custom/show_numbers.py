@@ -87,7 +87,7 @@ class Interactor:
 ctx = Context('accessibility')
 ctx.commands = {
     'show numbers':   lambda m: actions.self.show(),
-    'pick <..numbers.number>':  lambda m: actions.self.pick(m.number[0][0]),
+    'pick <number>':  lambda m: actions.self.pick(m.number[0]),
     'cancel numbers': lambda m: actions.self.cancel(),
 }
 interactor = Interactor()
